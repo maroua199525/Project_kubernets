@@ -22,8 +22,8 @@ kubectl get deployments
 ```
 - The output is similar to:
 ```c
-NAME         READY   	UP-TO-DATE   		AVAILABLE   		AGE
-hello-world   1/1     					1            				1           		4s 
+NAME         READY      UP-TO-DATE   		AVAILABLE   		AGE
+hello-world   1/1     	  1            			1           	4s 
 ```
 
 
@@ -33,6 +33,6 @@ kubectl get pods
 ```
 - The output is similar to:
 ```c
-NAME    								READY     STATUS    RESTARTS   	AGE
-hello-world-8666cf6ccf-br9b5   1/1       	Running   		0          	4s
+NAME    					   READY     STATUS    RESTARTS   	AGE
+hello-world-8666cf6ccf-br9b5   1/1       Running      0          4s
 ```
