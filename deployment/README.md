@@ -17,13 +17,22 @@ $ docker version
  - #### kubectl create -f hello-world.yaml
 
 - View the Deployment:
-		kubectl get deployments
+```c
+kubectl get deployments
+```
 - The output is similar to:
-		NAME         READY   UP-TO-DATE   AVAILABLE   AGE
-		hello-world   1/1     1            1           4s
+```c
+NAME         READY   	UP-TO-DATE   		AVAILABLE   		AGE
+hello-world   1/1     					1            				1           		4s 
+```
+
 
 - View the Pod:
-		kubectl get pods
+```c
+kubectl get pods
+```
 - The output is similar to:
-		NAME                          READY     STATUS    RESTARTS   AGE
-		hello-world-8666cf6ccf-br9b5   1/1       Running   0          4s
+```c
+NAME    								READY     STATUS    RESTARTS   	AGE
+hello-world-8666cf6ccf-br9b5   1/1       	Running   		0          	4s
+```
