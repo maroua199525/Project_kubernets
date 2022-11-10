@@ -13,7 +13,7 @@
  - **kind**; the type of k8s object you expect to create 
  - **metada**: data of key type value to uniquely identify the object.
  - **spec**: contains the specification with nested fields specific to each k8s object. the format is therefore different for each kubernets object.
-##### Create file nginx-pod.yaml
+##### Create file nginx-pod.yaml (pod with just one container)
 
 - run the command **Minikube** to create Kubernetes Clusters 
 
@@ -21,7 +21,8 @@
 Minikube start
 ```
 
-- ![Screenshot](Minikube.jpg)
+
+- ![Screenshot](Create.jpg)
 
 - run the command **kubectl create -f** to create the Pod 
 
@@ -34,6 +35,10 @@ kubectl create -f nginx-pod.yaml
 
  -  ```shell
 kubectl get pod
-```
-- ![Screenshot](result.jpg)
+``` 
+
+![Optional Text]
+
+
+##### Create file nginx-pod.yaml (pod with two one container)
 

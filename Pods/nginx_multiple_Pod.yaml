@@ -1,0 +1,34 @@
+# create a Pod with two containers from the image nginx
+# link of the image: https://hub.docker.com/_/nginx
+
+apiVersion: v1   # we use the API of version v1
+kind: Pod        # we create the object Pod of kubernets.
+metadata:               # here we create the label of type web, we named our Pod nginx
+  name: multic
+spec:            # here we configure our Pod, container image nginx
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: html
+      mountPath: /usr/share/nginx/html
+    - name: alpine
+      image: alpine
+    volumeMounts:
+    - name: html
+      mountPath: /html
+    command: ["/bin/sh", "-c"]
+    args:
+      - date >> /html/index.html;
+        while true; do
+          sleep 1
+        done
+
+  volumes:
+  - name: html
+    hostPath:
+      path: /data
+      type: Directory
+
+
+
