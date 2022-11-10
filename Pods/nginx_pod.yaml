@@ -1,0 +1,14 @@
+# create a Pod with single container from the image nginx
+# link of the image: https://hub.docker.com/_/nginx
+
+apiVersion: v1   # we use the API of version v1
+kind: Pod        # we create the object Pod of kubernets.
+metadata:       
+  labels:        # here we create the label of type web, we named our Pod nginx
+    type: web
+  name: nginx
+spec:            # here we configure our Pod, container image nginx
+  containers:
+  - image: nginx
+    name: nginx
+
